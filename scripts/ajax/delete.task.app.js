@@ -1,19 +1,24 @@
 // Borrado de la tarea de la DB, con ajax en vanilla JS
 function sendBorrar(borrar_task){
 
-
     var borrar = {"borrar_task": borrar_task};
-    $.ajax({
-        data: borrar,
-        type: 'POST',
-        url: 'view/view_delete.php',
-        success: function(data){
-            //document.getElementById("datos_buscador").innerHTML = data;
-            console.log(data);
-            recargaTabla();
-        }
-    });
 
+    // Alert para confirmar eliminacion de tarea
+    if(confirm('Desea eliminar esta tarea?')){
+
+        $.ajax({
+            data: borrar,
+            type: 'POST',
+            url: 'view/view_delete.php',
+            success: function(data){
+
+                // Recarga la Tabla de tareas
+                recargaTabla();
+            }
+        });
+    
+    }
+    
 }
 
 

@@ -7,7 +7,6 @@ function recargaTabla(){
     xhr_view.onload = function(){
     if(this.status === 200){
 
-        console.log('carga de la tabla');
         document.getElementById('datos_buscador').innerHTML = xhr_view.responseText;
 
     } else {

@@ -32,8 +32,8 @@ while($row = $view->fetch()){ ?>
 
             <td><center>
 
-                <a href="view_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-secondary" name="editar">Editar
-                </a>
+                <button class="btn btn-secondary" name="btn_editar" onclick="sendEditar(<?php echo $row['id']; ?>);">Editar</button>
+
 
                 <button class="btn btn-danger" name="btn_borrar" onclick="sendBorrar(<?php echo $row['id']; ?>);">Borrar</button>
 

@@ -4,10 +4,10 @@
             <a href="board.php" class="navbar-brand"><h1>Mis Tareas</h1></a>
     
     
-    
+        <div class="input-group mb-3">
             <!-- Barra de busqueda instantanea -->
-            <input onkeyup="buscar_ahora($('#buscar').val());" class="form-control me-2" type="text" id="buscar" name="buscar" placeholder="Buscar..." aria-label="Search">
-            
+            <input onkeyup="buscar_ahora($('#buscar').val());" class="form-control" type="text" id="buscar" name="buscar" placeholder="Buscar tarea..." aria-label="Search">
+        </div> 
     
     
         </div>

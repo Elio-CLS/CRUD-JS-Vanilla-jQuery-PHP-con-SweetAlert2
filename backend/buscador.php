@@ -36,10 +36,14 @@ $numero = $stml->rowCount();
     <tr>
             <td><?php echo $resultado['title'] ?></td>
             <td><?php echo $resultado['texto'] ?></td>
+            
             <td><center>
-                <a href="view_edit.php?id=<?php echo $resultado['id']; ?>" class="btn btn-secondary">Editar
-                </a>
-                <a href="view/delete_task.php?id=<?php echo $resultado['id']; ?>" class="btn btn-danger">Borrar</a>
+
+                <button class="btn btn-secondary" name="btn_editar" onclick="sendEditar(<?php echo $resultado['id']; ?>);">Editar</button>
+
+
+                <button class="btn btn-danger" name="btn_borrar" onclick="sendBorrar(<?php echo $resultado['id']; ?>);">Borrar</button>
+
             </td></center>
         </tr>
 

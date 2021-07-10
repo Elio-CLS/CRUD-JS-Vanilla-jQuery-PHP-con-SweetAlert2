@@ -3,21 +3,30 @@
 let xhr_form = new XMLHttpRequest();
 let data = document.getElementById('formulario');
 
+// Activa que url se seleccionara
+var actualizar = false;
+
 
 data.addEventListener('submit', (evento) => {
 
-    let form = new FormData(data);
-    console.log(form);
+    // Selecciona la url cuando se Guarda o Edita una tarea
+    var url = actualizar === false ? 'view/view_save.php' : 'view/view_update.php';
 
-    xhr_form.open('POST', 'view/view_save.php');
+
+    let form = new FormData(data);
+
+    xhr_form.open('POST', url);
     xhr_form.onload = function(){
+        
         if(this.status === 200){
 
-            console.log('carga exitosa');
             //alert('Carga exitosa');
 
-            // Recarga la tabla
+            // Recarga la Tabla de tareas
             recargaTabla();
+
+            // Recarga el Formulario
+            recargaForm();
 
             // Resetea el formulario
             document.getElementById('formulario').reset();
@@ -28,7 +37,6 @@ data.addEventListener('submit', (evento) => {
     }
 
     xhr_form.send(form);
-    console.log('boton funcionando');
 
     // Evita que se refresque la pagina con la accion del boton en el form
     evento.preventDefault();
