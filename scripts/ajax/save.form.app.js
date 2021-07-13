@@ -16,28 +16,21 @@ data.addEventListener('submit', (evento) => {
     let form = new FormData(data);
     
     
-
     xhr_form.open('POST', url);
     xhr_form.onload = function(){
-        
-        if(this.status === 200){
 
+        this.status === 200 ? guardado() : errorMSJ() ; // Alertas
 
-            // Alerta de guardado;
-            guardado();
+        // Recarga la Tabla de tareas
+        recargaTabla();
 
-            // Recarga la Tabla de tareas
-            recargaTabla();
+        // Recarga el Formulario
+        recargaForm();
 
-            // Recarga el Formulario
-            recargaForm();
+        actualizar = false;
+        // Resetea el formulario
+        document.getElementById('formulario').reset();
 
-            actualizar = false;
-            // Resetea el formulario
-            document.getElementById('formulario').reset();
-
-            
-        }
     }
 
 

@@ -16,6 +16,7 @@
 <script type="text/javascript" src="scripts/alerts/form.vacio.js"></script>
 <script type="text/javascript" src="scripts/alerts/borrar.js"></script>
 <script type="text/javascript" src="scripts/alerts/eliminado.js"></script>
+<script type="text/javascript" src="scripts/alerts/error.js"></script>
 
 
 <!-- Bootstrap -->

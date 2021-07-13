@@ -1,10 +1,10 @@
-function guardado(){
+function errorMSJ(){
 
     Swal.fire({
         position: 'bottom',
-        icon: 'success',
-        iconColor: '#198754',
-        title: 'Tarea guardada exitosamente',
+        icon: 'error',
+        iconColor: 'dc3545',
+        title: 'Error!, Intentelo de nuevo',
         width: '45%',
         grow: true,
         toast: true,
@@ -12,7 +12,7 @@ function guardado(){
         showConfirmButton: false,
         allowOutsideClick: true,
         allowEscapeKey: true,
-	      allowEnterKey:  true,
+	    allowEnterKey:  true,
         timerProgressBar: true,
         timer: 4000
       })
