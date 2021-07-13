@@ -32,10 +32,10 @@ while($row = $view->fetch()){ ?>
 
             <td><center>
 
-                <button class="btn btn-secondary" name="btn_editar" onclick="sendEditar(<?php echo $row['id']; ?>);">Editar</button>
+                <button class="btn btn-outline-primary btn-sm" name="btn_editar" onclick="editando(<?php echo $row['id']; ?>);">Editar</button>
 
 
-                <button class="btn btn-danger" name="btn_borrar" onclick="sendBorrar(<?php echo $row['id']; ?>);">Borrar</button>
+                <button class="btn btn-outline-danger btn-sm" name="btn_borrar" onclick="borrando(<?php echo $row['id']; ?>);">Borrar</button>
 
             </td></center>
         </tr>

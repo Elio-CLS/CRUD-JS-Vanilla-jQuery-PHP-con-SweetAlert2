@@ -14,13 +14,17 @@ data.addEventListener('submit', (evento) => {
 
 
     let form = new FormData(data);
+    
+    
 
     xhr_form.open('POST', url);
     xhr_form.onload = function(){
         
         if(this.status === 200){
 
-            //alert('Carga exitosa');
+
+            // Alerta de guardado;
+            guardado();
 
             // Recarga la Tabla de tareas
             recargaTabla();
@@ -28,13 +32,14 @@ data.addEventListener('submit', (evento) => {
             // Recarga el Formulario
             recargaForm();
 
+            actualizar = false;
             // Resetea el formulario
             document.getElementById('formulario').reset();
 
-        } else {
-            console.log('Error en cargar petision' + this.status);
+            
         }
     }
+
 
     xhr_form.send(form);
 

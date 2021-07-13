@@ -39,10 +39,10 @@ $numero = $stml->rowCount();
             
             <td><center>
 
-                <button class="btn btn-secondary" name="btn_editar" onclick="sendEditar(<?php echo $resultado['id']; ?>);">Editar</button>
+                <button class="btn btn-outline-primary btn-sm" name="btn_editar" onclick="editando(<?php echo $resultado['id']; ?>);">Editar</button>
 
 
-                <button class="btn btn-danger" name="btn_borrar" onclick="sendBorrar(<?php echo $resultado['id']; ?>);">Borrar</button>
+                <button class="btn btn-outline-danger btn-sm" name="btn_borrar" onclick="borrando(<?php echo $resultado['id']; ?>);">Borrar</button>
 
             </td></center>
         </tr>
